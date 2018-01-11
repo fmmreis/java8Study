@@ -47,13 +47,25 @@ public class StreamsApp {
 		System.out.println(x);
 	}
 
+	private void testStreams(){
+		lista.stream().forEach(System.out::println);
+
+		System.out.println("-------------------------");
+		lista.stream().forEach((s)-> System.out.println(s));
+
+		System.out.println("-------------------------");
+		for(String s : lista){
+			System.out.println(s);
+		}
+	}
+
 	public static void main(String[] args) {
 		StreamsApp app = new StreamsApp();
 		//app.filtrar();
 		//app.ordenar();
 		//app.transformar();
 		//app.limitar();
-		app.contar();
-		
+		//app.contar();
+		app.testStreams();
 	}
 }
